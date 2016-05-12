@@ -1,0 +1,9 @@
+#!/bin/bash
+rm `find . -name \*.exe`
+git add -A
+git status
+echo --------------------------------------------
+read -n1 -r -p "Press any key to continue..." key
+echo --------------------------------------------
+git commit
+git push

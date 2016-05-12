@@ -1,0 +1,5 @@
+/home/alex/Expressions/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/alex/Expressions/bin/Debug/Expressions.exe.mdb
+/home/alex/Expressions/bin/Debug/Expressions.exe
+/home/alex/Expressions/obj/x86/Debug/Expressions.exe
+/home/alex/Expressions/obj/x86/Debug/Expressions.exe.mdb
