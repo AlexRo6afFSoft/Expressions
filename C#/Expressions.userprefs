@@ -1,12 +1,13 @@
 ﻿<Properties StartupItem="Expressions.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Solve.cs">
     <Files>
-      <File FileName="Program.cs" Line="18" Column="25" />
-      <File FileName="Operation.cs" Line="11" Column="35" />
+      <File FileName="Program.cs" Line="19" Column="54" />
+      <File FileName="Operation.cs" Line="11" Column="40" />
       <File FileName="Bracket.cs" Line="4" Column="15" />
-      <File FileName="Expression.cs" Line="23" Column="4" />
-      <File FileName="Base.cs" Line="6" Column="2" />
+      <File FileName="Expression.cs" Line="22" Column="24" />
+      <File FileName="Base.cs" Line="4" Column="1" />
+      <File FileName="Solve.cs" Line="11" Column="21" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

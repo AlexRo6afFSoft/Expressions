@@ -39,6 +39,7 @@
     <Compile Include="Bracket.cs" />
     <Compile Include="Base.cs" />
     <Compile Include="Expression.cs" />
+    <Compile Include="Solve.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

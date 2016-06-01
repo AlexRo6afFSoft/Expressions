@@ -12,7 +12,6 @@ namespace expr_example
 		function<T> F;
 		public override T f (params T[] args)
 		{
-			Console.WriteLine ("BLQQQQQ");
 			if (args.Length < 2) //binary operator
 				throw new SystemException ("Bad Arguments! ;(");
 			return F (args [0], args [1]);
@@ -23,7 +22,6 @@ namespace expr_example
 			this.symbol = s;
 			this.priority = p;
 			this.F = action;
-			Console.WriteLine ("Blq");
 		}
 	};
 
@@ -56,6 +54,4 @@ namespace expr_example
 			this.F = action;
 		}
 	};
-
 }
-

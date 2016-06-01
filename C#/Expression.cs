@@ -20,7 +20,6 @@ namespace expr
 		public void addOperation (Operation<T> op)
 		{
 			operations.Add (op);
-			Console.WriteLine ("add OP2");
 		}
 		public Operation<T> get_op (int ind)
 		{
