@@ -13,15 +13,14 @@ namespace Expressions
 		}
 		public static void Main (string[] args)
 		{
-			functype2<int> c = adding;
 			expression<int> my_expr = new expression<int> ();
-			my_expr.addOperation (ref c, 1, 2); // runtime error -> NullPtr. Exeption
-			Console.WriteLine ("{0} = {1} = {2}", adding (1,2), c (1,2), my_expr.operations [0] (1, 2));
+			plus_type<int> instance = new plus_type<int> (adding);
+			my_expr.addOperation (new plus_type<int>(adding));
+			Console.WriteLine ("{0} = {1} = {2}", adding (1,2), instance.f (1,2), my_expr.operations [0].f (1, 2));
 			for (int i = 0; i < 200000000; i++) {
 				i++;
 			}
 			return ;
-			//Console.WriteLine ("{0}", my_expr.get_op (0) (1, 2));
 		}
 	}
 }

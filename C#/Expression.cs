@@ -4,32 +4,29 @@ using expr;
 
 namespace expr
 {
-	public delegate T functype1<T> (T a);
-	public delegate T functype2<T> (T a, T b);
 	public class expression<T>
 	{
 		public int number_priority;
-		public List < functype2<T> > operations;
-		public List < functype1<T> >   brackets;
+		public List < Operation<T> > operations;
+		public List < Bracket<T> >   brackets;
 		public expression (int n = int.MaxValue)
 		{
 			number_priority = n;
 		}
-		public void addBrackets (functype1<T> b)
+		public void addBrackets (Bracket<T> b)
 		{
-			brackets.Add ((functype1<T>) b.Clone ());
+			brackets.Add (b);
 		}
-		public void addOperation (functype2<T> op, T a, T b)
+		public void addOperation (Operation<T> op)
 		{
-			Console.WriteLine ("add OP = {0} {1} {2} {3}", op (a, b), op, op.Clone (), (functype2<T>)(op.Clone ()));
-			operations.Add ((functype2<T>) op.Clone ()); // runtime error -> NullPointer Exeption
+			operations.Add (op); //NullPointer exeption -> runtime error
 			Console.WriteLine ("add OP2");
 		}
-		public functype2<T> get_op (int ind)
+		public Operation<T> get_op (int ind)
 		{
 			return (operations [ind]);
 		}
-		public functype1<T> get_br (int ind)
+		public Bracket<T> get_br (int ind)
 		{
 			return (brackets [ind]);
 		}

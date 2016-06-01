@@ -8,7 +8,7 @@ namespace expr
 		public int operands;
 		public int priority;
 		public char symbol;
-		public abstract T f (List<T> a);
+		public abstract T f (params T[] args);
 	}
 }
 

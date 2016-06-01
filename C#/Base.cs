@@ -10,75 +10,20 @@ namespace expr_example
 	public class plus_type <T> : Operation <T>
 	{
 		function<T> F;
-		public override T f (List<T> v)
+		public override T f (params T[] args)
 		{
 			Console.WriteLine ("BLQQQQQ");
-			if (v.Count < 2) //binary operator
+			if (args.Length < 2) //binary operator
 				throw new SystemException ("Bad Arguments! ;(");
-			return F (v [0], v [1]);
+			return F (args [0], args [1]);
 		}
 		public plus_type (function<T> action, char s = '+', int p = 1)
 		{
-			Console.WriteLine ("Blq");
-			this.operands = 2;
-			Console.WriteLine ("Blq");
-			this.symbol = s;
-			Console.WriteLine ("Blq");
-			this.priority = p;
-			Console.WriteLine ("Blq");
-			this.F = action;
-			Console.WriteLine ("Blq");
-		}
-	};
-	public class minus_type<T> : Operation <T>
-	{
-		function<T> F;
-		public override T f (List <T> v)
-		{
-			if (v.Count < 2) //binary operator
-				throw new SystemException ("Bad Arguments! ;(");
-			return F (v [0], v [1]);
-		}
-		public minus_type (function<T> action, char s = '-', int p = 1)
-		{
 			this.operands = 2;
 			this.symbol = s;
 			this.priority = p;
 			this.F = action;
-		}
-	};
-	public class mul_type<T> : Operation <T>
-	{
-		function<T> F;
-		public override T f (List <T> v)
-		{
-			if (v.Count < 2) //binary operator
-				throw new SystemException ("Bad Arguments! ;(");
-			return F (v [0], v [1]);
-		}
-		public mul_type (function<T> action, char s = '*', int p = 2)
-		{
-			this.operands = 2;
-			this.symbol = s;
-			this.priority = p;
-			this.F = action;
-		}
-	};
-	public class div_type <T> : Operation <T>
-	{
-		function<T> F;
-		public override T f (List <T> v)
-		{
-			if (v.Count < 2) //binary operator
-				throw new SystemException ("Bad Arguments! ;(");
-			return F (v [0], v [1]);
-		}
-		public div_type (function<T> action, char s = '/', int p = 2)
-		{
-			this.operands = 2;
-			this.symbol = s;
-			this.priority = p;
-			this.F = action;
+			Console.WriteLine ("Blq");
 		}
 	};
 
