@@ -7,8 +7,8 @@ namespace expr
 	public class expression<T>
 	{
 		public int number_priority;
-		public List < Operation<T> > operations;
-		public List < Bracket<T> >   brackets;
+		public List < Operation<T> > operations = new List <Operation<T>> ();
+		public List < Bracket<T> >   brackets   = new List <Bracket<T>> ();
 		public expression (int n = int.MaxValue)
 		{
 			number_priority = n;
@@ -19,7 +19,7 @@ namespace expr
 		}
 		public void addOperation (Operation<T> op)
 		{
-			operations.Add (op); //NullPointer exeption -> runtime error
+			operations.Add (op);
 			Console.WriteLine ("add OP2");
 		}
 		public Operation<T> get_op (int ind)
