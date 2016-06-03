@@ -9,6 +9,10 @@ namespace expr
 		public int number_priority;
 		public List < Operation<T> > operations = new List <Operation<T>> ();
 		public List < Bracket<T> >   brackets   = new List <Bracket<T>> ();
+		public Dictionary <char, Operation <T> > oper = new Dictionary <char, Operation <T>> ();
+		public Dictionary <char, int > opened = new Dictionary <char, int> ();
+		public Dictionary <char, int > closed = new Dictionary <char, int> ();
+
 		public expression (int n = int.MaxValue)
 		{
 			number_priority = n;
@@ -16,10 +20,13 @@ namespace expr
 		public void addBrackets (Bracket<T> b)
 		{
 			brackets.Add (b);
+			opened [b.open] = brackets.Count;
+			closed [b.close] = brackets.Count;
 		}
 		public void addOperation (Operation<T> op)
 		{
 			operations.Add (op);
+			oper [op.symbol] = op;
 		}
 		public Operation<T> get_op (int ind)
 		{
